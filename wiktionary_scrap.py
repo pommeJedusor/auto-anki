@@ -43,8 +43,8 @@ def get_audio_links(res):
         for el in element:
             src = el['src']
             #get only the english sounds
-            if "En-uk" in src or "En-us" in src:
-                srcs.append(f"https:{src}")
+            if ("En" in src or "en" in src) and not "transcoded" in src:
+                srcs.append(f"File:{src.split('/')[-1]}")
     return srcs
 
 def download_file(file):
