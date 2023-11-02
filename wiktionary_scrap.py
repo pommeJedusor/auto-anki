@@ -70,6 +70,3 @@ def download_file(file):
         print(f"successfully downloaded {display_title}")
     else:
         print(f"error : {file.status_code}")
-
-
-download_file("File:En-us-table.ogg")
